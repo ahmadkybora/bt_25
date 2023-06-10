@@ -24,3 +24,9 @@ def main():
     add_handler = updater.dispatcher.add_handler
 
     add_handler(CommandHandler('start', command_start))
+
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == main():
+    main()
