@@ -14,8 +14,10 @@ def command_start(update: Update, context: CallbackContext) -> None:
     username = update.effective_user.username
 
     #user = User.where('user_id', '=', user_id).first()
-
-    update.message.reply_text(lp.START_MESSAGE, reply_markup=ReplyKeyboardRemove())
+    update.message.reply_text(
+        "ss",
+        reply_markup=ReplyKeyboardRemove()
+    )
     
 def main():
     defaults = Defaults(parse_mode=ParseMode.MARKDOWN, timeout=120)
