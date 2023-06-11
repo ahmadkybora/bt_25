@@ -6,7 +6,8 @@ from models.user import User
 import os
 import localization as lp
 
-BOT_TOKEN = os.getenv('BOT_TOKEN')
+# BOT_TOKEN = os.getenv('BOT_TOKEN')
+BOT_TOKEN = '434941139:AAG1Apadczm8qIT9AzT-E3BLRI9_wRIZtd4'
 
 def command_start(update: Update, context: CallbackContext):
     user_id = update.effective.user_id
