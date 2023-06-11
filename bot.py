@@ -11,7 +11,7 @@ BOT_TOKEN = '434941139:AAG1Apadczm8qIT9AzT-E3BLRI9_wRIZtd4'
 
 def command_start(update: Update, context: CallbackContext) -> None:
     user_id = update.effective_user.id
-    user_name = update.effective.user_name
+    username = update.effective_user.username
 
     user = User.where('user_id', '=', user_id).first()
 
