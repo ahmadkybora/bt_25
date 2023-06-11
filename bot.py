@@ -13,7 +13,7 @@ def command_start(update: Update, context: CallbackContext) -> None:
     user_id = update.effective_user.id
     username = update.effective_user.username
 
-    user = User.where('user_id', '=', user_id).first()
+    #user = User.where('user_id', '=', user_id).first()
 
     update.message.reply_text(lp.START_MESSAGE, reply_markup=ReplyKeyboardRemove())
     
