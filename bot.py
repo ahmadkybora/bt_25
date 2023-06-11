@@ -9,8 +9,8 @@ import localization as lp
 # BOT_TOKEN = os.getenv('BOT_TOKEN')
 BOT_TOKEN = '434941139:AAG1Apadczm8qIT9AzT-E3BLRI9_wRIZtd4'
 
-def command_start(update: Update, context: CallbackContext):
-    user_id = update.effective.user_id
+def command_start(update: Update, context: CallbackContext) -> None:
+    user_id = update.effective_user.id
     user_name = update.effective.user_name
 
     user = User.where('user_id', '=', user_id).first()
