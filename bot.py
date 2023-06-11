@@ -18,9 +18,9 @@ def command_start(update: Update, context: CallbackContext):
     
 def main():
     defaults = Defaults(parse_mode=ParseMode.MARKDOWN, timeout=120)
-    persistance = PicklePersistence('persistence_storage')
+    persistence = PicklePersistence('persistence_storage')
 
-    updater = Updater(BOT_TOKEN, persistance=persistance, defaults=defaults)
+    updater = Updater(BOT_TOKEN, persistence=persistence, defaults=defaults)
     add_handler = updater.dispatcher.add_handler
 
     add_handler(CommandHandler('start', command_start))
