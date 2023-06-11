@@ -15,7 +15,7 @@ def command_start(update: Update, context: CallbackContext) -> None:
 
     #user = User.where('user_id', '=', user_id).first()
     update.message.reply_text(
-        "ss",
+        lp.START_MESSAGE,
         reply_markup=ReplyKeyboardRemove()
     )
     
